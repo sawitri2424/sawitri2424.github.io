@@ -24,14 +24,14 @@ if (!reducedMotion && "IntersectionObserver" in window) {
   }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
   document.querySelectorAll(
-    ".hero-copy, .ticker, .split > h2, .big, .project, .tile, .rows li, .edu, .contact"
+    ".hero-copy, .ticker, .split > h2, .big, .project, .work, .tile, .rows li, .edu, .contact"
   ).forEach((element) => {
     element.classList.add("reveal");
     revealObserver.observe(element);
   });
 
   if (finePointer) {
-    const tiltTargets = document.querySelectorAll(".portrait, .project, .tile");
+    const tiltTargets = document.querySelectorAll(".portrait, .project, .work, .tile");
     tiltTargets.forEach((element) => {
       element.addEventListener("pointermove", (event) => {
         const bounds = element.getBoundingClientRect();
